@@ -3,12 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Сьогодення</title>
+     <style>
+        h1 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .back-link {
+            font-style: italic;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* Непарні елементи ненумерованого списку */
+        ul > li:nth-child(odd) {
+            background-color: #cccccc;
+            color: #000000;
+        }
+
+        /* Парні елементи ненумерованого списку */
+        ul > li:nth-child(even) {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* 3-й елемент нумерованого списку */
+        ol > li:nth-child(3) {
+            cursor: pointer;
+        }
+
+        /* 4-й елемент нумерованого списку */
+        ol > li:nth-child(4) {
+            background-color: #ffeaa7;
+        }
+
+        /* 5-й елемент нумерованого списку */
+        ol > li:nth-child(5) {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Сьогодення так званої Яші</h1>
 
-    <a href="index.html">Назад на головну</a>
+    <a href="index.html" class="back-link">Назад на головну</a>
 
     <h2>Мій список покупок</h2>
     <ul>
