@@ -3,6 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Автобіографія</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .back-link {
+            font-style: italic;
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        /* Кнопки змісту */
+        .menu-btn {
+            display: inline-block;
+            width: 160px;
+            padding: 8px;
+            margin: 4px;
+            text-align: center;
+            text-decoration: none;
+            border: 3px solid #000;
+            font-weight: bold;
+        }
+
+        .menu-btn:link,
+        .menu-btn:visited {
+            background-color: blue;
+            color: white;
+        }
+
+        .menu-btn:hover {
+            background-color: magenta;
+            color: white;
+        }
+
+        .menu-btn:active {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Розділи */
+        article {
+            font-size: 120%;  /* +20% */
+        }
+
+        article h2 {
+            font-size: 144%;  /* 120% * 1.2 = 144% */
+        }
+
+        /* Різні фони для текстів розділів */
+        #base-text     { background-color: #fdebd0; color: #7e5109; }
+        #childhood-text { background-color: #d6eaf8; color: #1b4f72; }
+        #school-text   { background-color: #d5f5e3; color: #145a32; }
+        #outside-text  { background-color: #fadbd8; color: #78281f; }
+        #university-text { background-color: #e8daef; color: #4a235a; }
+
+        .to-content {
+            font-weight: bold;
+        }
+
+        .to-top {
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,38 +87,38 @@
 
     <article>
         <h2 id="base">Базова інформація</h2>
-        <p>
+        <p id="base-text">
            Я народилась 7 вересня 2007 року в місті Коломия і в сім'ї до 11
           років була єдиною дитиною. По своїй натурі завжди була тихою, могла годинами 
           сидіти малювати. Мої батьки приватні підприємці які забезпечили мене всім необхідним, за що я їм
           неймовірно вдячна.
         </p>
-        <a href="#content">до змісту</a>
+        <a href="#content" class="to-content">до змісту</a>
     </article>
 
     <article>
         <h2 id="childhood">Дитинство</h2>
-        <p>
+        <p id="childhood-text">
             Не можу сказати що моє дитинство було дуже насиченим, оскільки віддавала перевагу
           не бігати з іншими дітьми по вулиці, а сидіти вдома за ноутбуком чи скетчбуком. До школи 
           я ще актично комунікувала з дітьми з садочка, а потім ситуація трішки змінилась.
         </p>
-        <a href="#content">до змісту</a>
+        <a href="#content" class="to-content">до змісту</a>
     </article>
 
     <article>
         <h2 id="school">Шкільні роки</h2>
-        <p>
+        <p id="school-text">
             У 6 років я пішла в школу №1, де провчилась до 11 класу. Чесно кажучи за цими роками
           я дуже сильно сумую, як би я тоді не ненавиділа вставати в школу, а на ділі це було того варте. 
           Там у мене з'явились перші друзі, з якими я й досі спілкуюсь. І, що головніше, там я знайшла себе як художника. ЇПІ!!!
         </p>
-        <a href="#content">до змісту</a>
+        <a href="#content" class="to-content">до змісту</a>
     </article>
 
     <article>
         <h2 id="outside">Поза школою</h2>
-        <p>
+        <p id="outside-text">
             Власне про мою творчу діяльність... Мабуть це було моїм єдиним поза шкільним заняттям. Хоча
           мені пропонували і інші варіанти, відірвати мене від листка і ручки було не можливо. Моя мама колись 
           навчалась на художницю і більшості б здалось, що мабуть вона мене чогось навчила, але на ділі у нас була 
@@ -60,23 +126,23 @@
           мені купили мій перший графічний планшет. І оскільки малювала я в графічних редакторах, я постійно працювала з 
           ноутбуком. А це вже доречі привело до вибору моєї спеціальності.
         </p>
-        <a href="#content">до змісту</a>
+        <a href="#content" class="to-content">до змісту</a>
     </article>
 
     <article>
         <h2 id="university">Університет</h2>
-        <p>
+        <p id="university-text">
             У 2024 році я вступила до КНУ на спеціальність "комп'ютерні науки". СТРАШНО БУЛО. КАПЕЦЬ. І в
           якійсь мірі страшно й досі, але ці 2 роки навчання дали мені життєвий досвід який уже не забудеш. Після 
           такого уже жодної перездачі не боїшся. Ні ну чесно хто б міг подумати що здати повторку треба до кінця травня а 
           здача на плагіат починається з червня? Так можна і посивіти в 18.
         </p>
-        <a href="#content">до змісту</a>
+        <a href="#content" class="to-content">до змісту</a>
     </article>
 
     <hr>
 
-    <a href="#top">Уверх</a>
+    <a href="#top" class="to-top">Уверх</a>
 
 </body>
 </html>
