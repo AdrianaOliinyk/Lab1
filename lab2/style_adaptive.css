@@ -168,6 +168,7 @@ article {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: flex-start;
 }
 .gallery-item {
     width: 100%; /* Mobile: 1 в стовпець */
