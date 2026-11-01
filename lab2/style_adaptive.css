@@ -1,0 +1,156 @@
+ * { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 { text-align: center; font-size: 24px; }
+
+/* Посилання (для index) */
+.menu-links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+.menu-links a:hover { background-color: magenta; }
+.menu-links a:active { background-color: yellow; color: black; }
+
+/* Кнопки змісту (для biography) */
+.menu-btn {
+    display: inline-block;
+    width: 160px;
+    padding: 8px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid #000;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+.menu-btn:hover { background-color: magenta; }
+.menu-btn:active { background-color: yellow; color: black; }
+
+/* Фони для статей (з ЛР №2) */
+#base-text { background-color: #fdebd0; color: #7e5109; }
+#childhood-text { background-color: #d6eaf8; color: #1b4f72; }
+#school-text { background-color: #d5f5e3; color: #145a32; }
+#outside-text { background-color: #fadbd8; color: #78281f; }
+#university-text { background-color: #e8daef; color: #4a235a; }
+
+/* =========================================
+   АДАПТИВНІСТЬ
+   ========================================= */
+
+/* --- 1. index.html --- */
+.menu-links {
+    display: flex;
+    flex-direction: column; /* Mobile: в 1 стовпець */
+    align-items: center;
+    gap: 10px;
+}
+.menu-links a { width: 100%; max-width: 300px; }
+
+@media (min-width: 768px) {
+    /* Tablet: в 2 рядки */
+    .menu-links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    .menu-links a { width: 45%; }
+}
+@media (min-width: 992px) {
+    /* Desktop: в 1 рядок */
+    .menu-links a { width: auto; flex: 1; max-width: 200px; }
+}
+
+/* --- 2. biography.html --- */
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+article {
+    width: 100%; /* Mobile: 1 в рядок */
+    border: 1px solid black; /* Вимога ЛР №4 */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+article h2 { font-size: 144%; margin-top: 0; }
+
+@media (min-width: 768px) {
+    /* Tablet: 2 зверху, 1 знизу */
+    article { width: calc(50% - 10px); }
+    article:last-child { width: 100%; }
+}
+@media (min-width: 992px) {
+    /* Desktop: 3 зверху, 2 знизу */
+    article { width: calc(33.33% - 14px); }
+    article:nth-child(4), article:nth-child(5) { width: calc(50% - 10px); }
+}
+
+/* --- 3. nowadays.html --- */
+.lists-container {
+    display: flex;
+    flex-direction: column; /* Mobile/Tablet: один під одним */
+    gap: 20px;
+}
+@media (min-width: 992px) {
+    /* Desktop: поруч */
+    .lists-container { flex-direction: row; justify-content: space-around; }
+    .lists-container > div { width: 45%; }
+}
+
+/* --- 4. friends.html --- */
+table { width: 100%; border-collapse: collapse; }
+th { font-size: 110%; background-color: #27ae60; color: white; padding: 8px; border: 1px solid #000; }
+td { font-size: 100%; padding: 8px; border: 1px solid #000; }
+
+@media (min-width: 768px) {
+    th { font-size: 120%; } /* +20% */
+    td { font-size: 110%; } /* +10% */
+}
+@media (min-width: 992px) {
+    th { font-size: 130%; } /* +30% */
+    td { font-size: 120%; } /* +20% */
+}
+
+/* --- 5. gallery.html --- */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.gallery-item {
+    width: 100%; /* Mobile: 1 в стовпець */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    /* Tablet: 2 зверху, 1 знизу */
+    .gallery-item { width: calc(50% - 10px); }
+    .gallery-item:last-child { width: 100%; }
+}
+@media (min-width: 992px) {
+    /* Desktop: 3 в ряд */
+    .gallery-item { width: calc(33.33% - 14px); }
+}
