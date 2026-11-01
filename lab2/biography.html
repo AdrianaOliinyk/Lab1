@@ -3,78 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Автобіографія</title>
-    <style>
-        h1 {
-            text-align: center;
-            font-size: 22px;
-        }
-
-        .back-link {
-            font-style: italic;
-        }
-
-        #content {
-            text-align: center;
-        }
-        #content-list {
-            list-style: none;
-            padding-left: 0;
-            margin-left: 0;
-        }
-        
-
-        /* Кнопки змісту */
-        .menu-btn {
-            display: inline-block;
-            width: 160px;
-            padding: 8px;
-            margin: 4px;
-            text-align: center;
-            text-decoration: none;
-            border: 3px solid #000;
-            font-weight: bold;
-        }
-
-        .menu-btn:link,
-        .menu-btn:visited {
-            background-color: green;
-            color: white;
-        }
-
-        .menu-btn:hover {
-            background-color: magenta;
-            color: white;
-        }
-
-        .menu-btn:active {
-            background-color: yellow;
-            color: black;
-        }
-
-        /* Розділи */
-        article {
-            font-size: 120%;  /* +20% */
-        }
-
-        article h2 {
-            font-size: 144%;  /* 120% * 1.2 = 144% */
-        }
-
-        /* Різні фони для текстів розділів */
-        #base-text     { background-color: #fdebd0; color: #7e5109; }
-        #childhood-text { background-color: #d6eaf8; color: #1b4f72; }
-        #school-text   { background-color: #d5f5e3; color: #145a32; }
-        #outside-text  { background-color: #fadbd8; color: #78281f; }
-        #university-text { background-color: #e8daef; color: #4a235a; }
-
-        .to-content {
-            font-weight: bold;
-        }
-
-        .to-top {
-            text-transform: uppercase;
-        }
-    </style>
+   <link rel="stylesheet" href="style_adaptive.css">
 </head>
 <body>
 
@@ -90,7 +19,8 @@
         <li><a href="#outside" class="menu-btn">Поза школою</a></li>
         <li><a href="#university" class="menu-btn">Університет</a></li>
     </ul>
-
+    
+    <div class="articles-container">
     <article>
         <h2 id="base">Базова інформація</h2>
         <p id="base-text">
@@ -145,7 +75,7 @@
         </p>
         <a href="#content" class="to-content">до змісту</a>
     </article>
-
+    </div>
     <hr>
 
     <a href="#top" class="to-top">Уверх</a>
