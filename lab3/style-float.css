@@ -13,30 +13,31 @@ body {
 
 .row {
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .row::after {
     content: "";
     display: table;
-    clear: both; 
+    clear: both;
 }
 
-
-.col {
+.col-4, .col-6, .col-12 {
     float: left;
     width: 100%;
-    padding: 10px; 
+    padding: 10px;
 }
+
+.col-4 { width: 33.33%; }
+.col-6 { width: 50%; }
+.col-12 { width: 100%; }
 
 .card {
     background-color: #d5f5e3;
     border: 2px solid #000;
-    position: relative; 
+    position: relative;
     padding: 40px 20px 20px 20px;
     min-height: 200px;
 }
-
 
 .card-caption {
     position: absolute;
@@ -52,15 +53,13 @@ body {
 .caption-pink { background-color: #d81b60; color: #fff; }
 .caption-light { background-color: #f8bbd0; color: #000; }
 
-
 @media (min-width: 768px) {
-    .col { width: 50%; }
-    .col:last-child { width: 100%; } 
+    .col-4 { width: 50%; }
+    .col-tablet-12 { width: 100%; }
 }
 
-@media (min-width: 992px) {
-    .col { width: 33.33%; } 
-    .col:last-child { width: 33.33%; }
+@media (max-width: 767px) {
+    .col-4, .col-6, .col-12, .col-tablet-12 { width: 100%; }
 }
 
 .links {
