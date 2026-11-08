@@ -11,6 +11,7 @@ body {
     margin-bottom: 30px;
 }
 
+
 .row {
     display: flex;       
     flex-wrap: wrap;     
@@ -18,10 +19,16 @@ body {
 }
 
 
-.col {
+.col-4, .col-6, .col-12 {
     width: 100%;
     padding: 10px;
 }
+
+/* Класи для ПК */
+.col-4 { width: 33.33%; } /* 4 колонки з 12 */
+.col-6 { width: 50%; }    /* 6 колонок з 12 */
+.col-12 { width: 100%; }  /* 12 колонок з 12 */
+
 
 .card {
     background-color: #d5f5e3;
@@ -48,15 +55,15 @@ body {
 
 
 @media (min-width: 768px) {
-    .col { width: 50%; }
-    .col:last-child { width: 100%; } 
+    .col-4 { width: 50%; }      /* Блоки col-4 стають 6 колонками з 12 */
+    .col-tablet-12 { width: 100%; } 
 }
 
 
-@media (min-width: 992px) {
-    .col { width: 33.33%; } 
-    .col:last-child { width: 33.33%; }
+@media (max-width: 767px) {
+    .col-4, .col-6, .col-12, .col-tablet-12 { width: 100%; }
 }
+
 
 .links {
     margin-top: 30px;
