@@ -11,24 +11,20 @@ body {
     margin-bottom: 30px;
 }
 
-
 .row {
     display: flex;       
     flex-wrap: wrap;     
     margin: 0 -10px;     
 }
 
-
 .col-4, .col-6, .col-12 {
     width: 100%;
     padding: 10px;
 }
 
-/* Класи для ПК */
-.col-4 { width: 33.33%; } /* 4 колонки з 12 */
-.col-6 { width: 50%; }    /* 6 колонок з 12 */
-.col-12 { width: 100%; }  /* 12 колонок з 12 */
-
+.col-4 { width: 33.33%; }
+.col-6 { width: 50%; }
+.col-12 { width: 100%; }
 
 .card {
     background-color: #d5f5e3;
@@ -53,17 +49,14 @@ body {
 .caption-pink { background-color: #d81b60; color: #fff; }
 .caption-light { background-color: #f8bbd0; color: #000; }
 
-
 @media (min-width: 768px) {
-    .col-4 { width: 50%; }      /* Блоки col-4 стають 6 колонками з 12 */
-    .col-tablet-12 { width: 100%; } 
+    .col-4 { width: 50%; }
+    .col-tablet-12 { width: 100%; }
 }
-
 
 @media (max-width: 767px) {
     .col-4, .col-6, .col-12, .col-tablet-12 { width: 100%; }
 }
-
 
 .links {
     margin-top: 30px;
