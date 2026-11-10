@@ -3,90 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контрольна робота — Варіант</title>
+    <title>Контрольна робота — Варіант 1</title>
 
-    <!-- Google Fonts: три різні шрифти -->
+    <!-- Три різні шрифти з Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Open+Sans:wght@400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- HEADER -->
     <header class="header">
-        <div class="logo">MySite</div>
+        <div class="logo">Variant 1</div>
         <nav class="nav">
-            <a href="#about">Про нас</a>
-            <a href="#features">Можливості</a>
+            <a href="#home">Головна</a>
+            <a href="#services">Послуги</a>
             <a href="#gallery">Галерея</a>
-            <a href="#contact">Контакти</a>
+            <a href="#contacts">Контакти</a>
         </nav>
     </header>
 
     <!-- HERO -->
-    <section class="hero">
-        <h1 class="hero-title">Ласкаво просимо</h1>
-        <p class="hero-subtitle">Демонстраційна сторінка контрольної роботи</p>
-        <a href="#features" class="btn">Дізнатися більше</a>
+    <section id="home" class="hero">
+        <h1 class="hero-title">Контрольна робота</h1>
+        <p class="hero-subtitle">Варіант 1 · номер у журналі 12</p>
+        <a href="#services" class="btn">Переглянути</a>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <h2>Про проєкт</h2>
-        <p>
-            Ця сторінка створена в межах контрольної роботи. Вона демонструє
-            використання трьох різних шрифтів з Google Fonts, адаптивний дизайн
-            та сучасні технології верстки (CSS Grid + Flexbox).
-        </p>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="features">
-        <h2>Можливості</h2>
+    <!-- SERVICES (CSS Grid) -->
+    <section id="services" class="services">
+        <h2>Наші послуги</h2>
         <div class="grid">
             <article class="card">
-                <h3>Адаптивність</h3>
-                <p>Сторінка коректно відображається на будь-яких пристроях.</p>
+                <h3>Веб-розробка</h3>
+                <p>Створення сучасних адаптивних сайтів з нуля.</p>
             </article>
             <article class="card">
-                <h3>Grid Layout</h3>
-                <p>Використано CSS Grid для побудови сітки карток.</p>
+                <h3>Дизайн</h3>
+                <p>Розробка UI/UX дизайну для веб- та мобільних застосунків.</p>
             </article>
             <article class="card">
-                <h3>Flexbox</h3>
-                <p>Flexbox застосовано для навігації та вирівнювання.</p>
+                <h3>Верстка</h3>
+                <p>HTML5, CSS3, Flexbox, Grid — чистий і семантичний код.</p>
             </article>
             <article class="card">
-                <h3>Шрифти</h3>
-                <p>Три різні шрифти з Google Fonts для заголовків, тексту й коду.</p>
+                <h3>Підтримка</h3>
+                <p>Супровід та оновлення проєктів після запуску.</p>
             </article>
         </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY (CSS Grid) -->
     <section id="gallery" class="gallery">
-        <h2>Галерея</h2>
+        <h2>Галерея робіт</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">1</div>
-            <div class="gallery-item">2</div>
-            <div class="gallery-item">3</div>
-            <div class="gallery-item">4</div>
-            <div class="gallery-item">5</div>
-            <div class="gallery-item">6</div>
+            <div class="gallery-item">01</div>
+            <div class="gallery-item">02</div>
+            <div class="gallery-item">03</div>
+            <div class="gallery-item">04</div>
+            <div class="gallery-item">05</div>
+            <div class="gallery-item">06</div>
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
+    <!-- CONTACTS -->
+    <section id="contacts" class="contacts">
         <h2>Контакти</h2>
         <p>Email: <code>student@example.com</code></p>
+        <p>Телефон: <code>+380 (00) 000-00-00</code></p>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2025 Контрольна робота. Усі права захищено.</p>
+        <p>&copy; 2025 Контрольна робота. Варіант 1.</p>
     </footer>
 
 </body>
