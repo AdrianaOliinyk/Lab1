@@ -1,3 +1,4 @@
+/* ============ БАЗОВІ СТИЛІ ============ */
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +6,16 @@
 }
 
 :root {
-    --primary: #4a6cf7;
-    --dark: #1a1a2e;
-    --light: #f5f7fb;
-    --text: #333;
-    --font-heading: 'Playfair Display', serif;   /* шрифт 1 */
-    --font-body: 'Montserrat', sans-serif;       /* шрифт 2 */
-    --font-mono: 'Roboto Mono', monospace;       /* шрифт 3 */
+    --primary: #e63946;
+    --dark: #1d3557;
+    --light: #f1faee;
+    --accent: #457b9d;
+    --text: #222;
+
+    /* Три різні шрифти */
+    --font-heading: 'Oswald', sans-serif;      /* шрифт 1 — заголовки */
+    --font-body: 'Open Sans', sans-serif;      /* шрифт 2 — основний текст */
+    --font-mono: 'JetBrains Mono', monospace;  /* шрифт 3 — код */
 }
 
 body {
@@ -22,18 +26,18 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: var(--font-heading);  
+    font-family: var(--font-heading);
+    font-weight: 700;
 }
 
 code {
-    font-family: var(--font-mono);     
+    font-family: var(--font-mono);
+    background: #eaeaea;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
-p, a, li {
-    font-family: var(--font-body);    
-}
-
-
+/* ============ HEADER — Flexbox ============ */
 .header {
     display: flex;
     justify-content: space-between;
@@ -48,8 +52,7 @@ p, a, li {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.4rem;
     color: #fff;
 }
 
@@ -61,7 +64,7 @@ p, a, li {
 .nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color .3s;
 }
 
@@ -69,68 +72,61 @@ p, a, li {
     color: var(--primary);
 }
 
-
+/* ============ HERO ============ */
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background: linear-gradient(135deg, var(--primary), #7c3aed);
+    background: linear-gradient(135deg, var(--dark), var(--accent));
     color: #fff;
 }
 
 .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    opacity: .9;
 }
 
 .btn {
     display: inline-block;
     padding: .8rem 2rem;
-    background: #fff;
-    color: var(--primary);
+    background: var(--primary);
+    color: #fff;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 700;
-    transition: transform .3s;
+    transition: transform .3s, background .3s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
+    background: #c1121f;
 }
 
-
-.about {
-    max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-
-.features {
+/* ============ SERVICES — CSS Grid ============ */
+.services {
     padding: 4rem 2rem;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.features h2 {
+.services h2,
+.gallery h2,
+.contacts h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
+    color: var(--dark);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.5rem;
 }
 
@@ -139,6 +135,7 @@ p, a, li {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    border-top: 4px solid var(--primary);
     transition: transform .3s;
 }
 
@@ -151,17 +148,11 @@ p, a, li {
     color: var(--primary);
 }
 
-
+/* ============ GALLERY — CSS Grid ============ */
 .gallery {
     padding: 4rem 2rem;
     max-width: 1100px;
     margin: 0 auto;
-}
-
-.gallery h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
 }
 
 .gallery-grid {
@@ -171,29 +162,33 @@ p, a, li {
 }
 
 .gallery-item {
-    background: var(--primary);
+    background: var(--accent);
     color: #fff;
     aspect-ratio: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: var(--font-heading);
+    transition: transform .3s;
 }
 
+.gallery-item:hover {
+    transform: scale(1.05);
+}
 
-.contact {
+/* ============ CONTACTS ============ */
+.contacts {
     text-align: center;
     padding: 4rem 2rem;
 }
 
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.contacts p {
+    margin-bottom: .5rem;
 }
 
-
+/* ============ FOOTER ============ */
 .footer {
     background: var(--dark);
     color: #fff;
@@ -202,7 +197,7 @@ p, a, li {
     margin-top: 2rem;
 }
 
-
+/* ============ АДАПТИВНІСТЬ ============ */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
